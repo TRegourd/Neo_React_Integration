@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Introduction to Blockchain development using JS",
+    "description": "Course to understand the basics concept of Blockchain with a well-known programmation language like JS",
+    "duration": "4 hours",
+    "creator_name": "Lorcann",
+    "creator_position": "Blockchain developper and trainer. Full stack",
+    "creator_avatar": "avatar.jpeg",
+    "logo": "js.png"
+  },
+  {
+    "id": 2,
+    "name": "Introduction to Blockchain development using JS",
+    "description": "Course to understand the basics concept of Blockchain with a well-known programmation language like JS",
+    "duration": "4 hours",
+    "creator_name": "Lorcann",
+    "creator_position": "Blockchain developper and trainer. Full stack",
+    "creator_avatar": "avatar.jpeg",
+    "logo": "js.png"
+  },
+  {
+    "id": 3,
+    "name": "Introduction to Blockchain development using JS",
+    "description": "Course to understand the basics concept of Blockchain with a well-known programmation language like JS",
+    "duration": "4 hours",
+    "creator_name": "Lorcann",
+    "creator_position": "Blockchain developper and trainer. Full stack",
+    "creator_avatar": "avatar.jpeg",
+    "logo": "js.png"
+  },
+  {
+    "id": 4,
+    "name": "Introduction to Blockchain development using JS",
+    "description": "Course to understand the basics concept of Blockchain with a well-known programmation language like JS",
+    "duration": "4 hours",
+    "creator_name": "Lorcann",
+    "creator_position": "Blockchain developper and trainer. Full stack",
+    "creator_avatar": "avatar.jpeg",
+    "logo": "js.png"
+  },
+  {
+    "id": 5,
+    "name": "Introduction to Blockchain development using JS",
+    "description": "Course to understand the basics concept of Blockchain with a well-known programmation language like JS",
+    "duration": "4 hours",
+    "creator_name": "Lorcann",
+    "creator_position": "Blockchain developper and trainer. Full stack",
+    "creator_avatar": "avatar.jpeg",
+    "logo": "js.png"
+  },
+  {
+    "id": 6,
+    "name": "Introduction to Blockchain development using JS",
+    "description": "Course to understand the basics concept of Blockchain with a well-known programmation language like JS",
+    "duration": "4 hours",
+    "creator_name": "Lorcann",
+    "creator_position": "Blockchain developper and trainer. Full stack",
+    "creator_avatar": "avatar.jpeg",
+    "logo": "js.png"
+  }
+]

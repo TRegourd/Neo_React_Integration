@@ -1,9 +1,5 @@
 {
-  "navbar": [
-    { "text": "Profile", "link": "/profile" },
-    { "text": "Dashboard", "link": "/dashboard" },
-    { "text": "Logout", "link": "/logout" }
-  ],
+  "navbar": [],
   "profile": [
     { "text": "Profile", "link": "/profile" },
     { "text": "Dashboard", "link": "/dashboard" },
