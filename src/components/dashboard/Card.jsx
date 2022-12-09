@@ -21,7 +21,7 @@ export default function CourseCard({ course }) {
           left: "5%",
           borderColor: "gray",
           border: "solid 1px",
-          padding: "3px",
+          padding: "5px",
         }}
         alt="Remy Sharp"
         src={`/${course.logo}`}

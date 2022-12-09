@@ -31,32 +31,32 @@
   },
   {
     "id": 4,
-    "name": "Introduction to Blockchain development using JS",
-    "description": "Course to understand the basics concept of Blockchain with a well-known programmation language like JS",
+    "name": "Introduction to Blockchain development using Solidity",
+    "description": "Course to understand the basics concept of Blockchain with a well-known programmation language like Solidity",
     "duration": "4 hours",
     "creator_name": "Lorcann",
     "creator_position": "Blockchain developper and trainer. Full stack",
     "creator_avatar": "avatar.jpeg",
-    "logo": "js.png"
+    "logo": "solidity.png"
   },
   {
     "id": 5,
-    "name": "Introduction to Blockchain development using JS",
-    "description": "Course to understand the basics concept of Blockchain with a well-known programmation language like JS",
+    "name": "Introduction to Blockchain development using Solidity",
+    "description": "Course to understand the basics concept of Blockchain with a well-known programmation language like Solidity",
     "duration": "4 hours",
     "creator_name": "Lorcann",
     "creator_position": "Blockchain developper and trainer. Full stack",
     "creator_avatar": "avatar.jpeg",
-    "logo": "js.png"
+    "logo": "solidity.png"
   },
   {
     "id": 6,
-    "name": "Introduction to Blockchain development using JS",
-    "description": "Course to understand the basics concept of Blockchain with a well-known programmation language like JS",
+    "name": "Introduction to Blockchain development using Solidity",
+    "description": "Course to understand the basics concept of Blockchain with a well-known programmation language like Solidity",
     "duration": "4 hours",
     "creator_name": "Lorcann",
     "creator_position": "Blockchain developper and trainer. Full stack",
     "creator_avatar": "avatar.jpeg",
-    "logo": "js.png"
+    "logo": "solidity.png"
   }
 ]
