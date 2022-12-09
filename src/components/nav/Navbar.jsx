@@ -14,18 +14,7 @@ import MenuItem from "@mui/material/MenuItem";
 import { styled } from "@mui/material";
 import { Link } from "react-router-dom";
 
-const pages = [
-  { text: "Profile", link: "/profile" },
-  { text: "Dashboard", link: "/dashboard" },
-  { text: "Logout", link: "/logout" },
-];
-const settings = [
-  { text: "Profile", link: "/profile" },
-  { text: "Dashboard", link: "/dashboard" },
-  { text: "Logout", link: "/logout" },
-];
-
-function Navbar() {
+function Navbar({ pages, profile }) {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -58,7 +47,6 @@ function Navbar() {
           <Typography
             variant="h6"
             noWrap
-            component="a"
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
@@ -101,7 +89,7 @@ function Navbar() {
                 display: { xs: "block", md: "none" },
               }}
             >
-              {pages.map((page, index) => (
+              {pages?.map((page, index) => (
                 <MenuItem key={index} onClick={handleCloseNavMenu}>
                   <Link to={page.link}>
                     <Typography textAlign="center">{page.text}</Typography>
@@ -133,7 +121,7 @@ function Navbar() {
             Academy
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {pages.map((page, index) => (
+            {pages?.map((page, index) => (
               <Link to={page.link} key={index}>
                 <Button
                   onClick={handleCloseNavMenu}
@@ -175,11 +163,11 @@ function Navbar() {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {settings.map((setting, index) => (
+              {profile?.map((link, index) => (
                 <MenuItem key={index} onClick={handleCloseUserMenu}>
-                  <Link to={setting.link}>
+                  <Link to={link.link}>
                     <Typography sx={{ color: "inherit" }} textAlign="center">
-                      {setting.text}
+                      {link.text}
                     </Typography>
                   </Link>
                 </MenuItem>

@@ -1,0 +1,26 @@
+{
+  "navbar": [
+    { "text": "Profile", "link": "/profile" },
+    { "text": "Dashboard", "link": "/dashboard" },
+    { "text": "Logout", "link": "/logout" }
+  ],
+  "profile": [
+    { "text": "Profile", "link": "/profile" },
+    { "text": "Dashboard", "link": "/dashboard" },
+    { "text": "Logout", "link": "/logout" }
+  ],
+  "sidebar": [
+    { "text": "My Progress", "link": "/progress", "icon": "rocket.png" },
+    { "text": "My Note", "link": "/notes", "icon": "book.png" },
+    { "text": "LeaderBoard", "link": "/leaderboard", "icon": "cup.png" }
+  ],
+  "catalog": [
+    { "text": "Tasks", "link": "/tasks" },
+    { "text": "Competitions", "link": "/competitions" },
+    { "text": "Assessments", "link": "/assessments" },
+    { "text": "Modules", "link": "/modules" },
+    { "text": "Practice", "link": "/practice" },
+    { "text": "Projects", "link": "/projects" },
+    { "text": "Events", "link": "/events" }
+  ]
+}
