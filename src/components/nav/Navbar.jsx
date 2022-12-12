@@ -34,7 +34,10 @@ function Navbar({ pages, profile }) {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar
+      position="static"
+      sx={{ boxShadow: "none", backgroundColor: "#111434" }}
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Link to={"/"}>

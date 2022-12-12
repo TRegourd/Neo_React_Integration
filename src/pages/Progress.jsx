@@ -29,13 +29,22 @@ export default function Progress() {
           <Typography variant="h5">{courses?.length} courses</Typography>
         </Grid>
         <Grid item>
-          <Button variant="contained" sx={{ padding: "10px" }}>
+          <Button variant="filter">
             <TuneIcon />
-            Filter Courses
+            <span>Filter Courses</span>
           </Button>
         </Grid>
       </Grid>
-      <Divider sx={{ margin: "20px" }} />
+      <Divider
+        variant="middle"
+        sx={{
+          marginX: "20%",
+          marginY: "5%",
+          borderBottomWidth: 5,
+          borderColor: "black",
+          borderRadius: "50%",
+        }}
+      />
       <Grid
         container
         spacing={{ xs: 2, md: 3 }}

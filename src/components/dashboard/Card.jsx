@@ -6,6 +6,7 @@ import {
   CardActions,
   CardContent,
   Divider,
+  LinearProgress,
   Typography,
 } from "@mui/material";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
@@ -22,12 +23,13 @@ export default function CourseCard({ course }) {
           borderColor: "gray",
           border: "solid 1px",
           padding: "5px",
+          backgroundColor: "white",
         }}
-        alt="Remy Sharp"
+        alt="course logo"
         src={`/${course.logo}`}
       />
-      <Card variant="outlined">
-        <CardContent>
+      <Card variant="outlined" sx={{ borderRadius: "20px", boxShadow: 2 }}>
+        <CardContent sx={{ minHeight: "200px" }}>
           <Typography variant="h5" component="div">
             {course.name}
           </Typography>
@@ -35,15 +37,37 @@ export default function CourseCard({ course }) {
             {course.description}
           </Typography>
 
-          <Typography
-            variant="body2"
-            sx={{ display: "flex", alignItems: "center", gap: "10px" }}
-          >
-            <AccessTimeIcon />
-            {course.duration}
-          </Typography>
+          <Box sx={{ paddingTop: "20px" }}>
+            {course?.user_progression === 0 ? (
+              <Typography
+                variant="body2"
+                sx={{ display: "flex", alignItems: "center", gap: "10px" }}
+              >
+                <AccessTimeIcon />
+                {course.duration}
+              </Typography>
+            ) : (
+              <Box
+                sx={{ width: "100%", display: "flex", alignItems: "center" }}
+              >
+                <Box sx={{ width: "100%", mr: 1 }}>
+                  <LinearProgress
+                    variant="determinate"
+                    value={course?.user_progression}
+                  />
+                </Box>
+                <Box sx={{ minWidth: 35 }}>
+                  <Typography
+                    variant="body2"
+                    color="text.secondary"
+                  >{`${course?.user_progression}%`}</Typography>
+                </Box>
+              </Box>
+            )}
+          </Box>
         </CardContent>
         <Divider />
+
         <CardActions
           sx={{
             display: "flex",
@@ -52,27 +76,49 @@ export default function CourseCard({ course }) {
             gap: "10px",
           }}
         >
-          {/* <Button size="small">Learn More</Button> */}
+          {course?.user_progression === 0 ? (
+            <>
+              <Avatar src={`/${course.creator_avatar}`} />
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "start",
+                  minHeight: "60px",
 
-          <Avatar src={`/${course.creator_avatar}`} />
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "start",
-            }}
-          >
-            <Typography sx={{ fontSize: 14 }} color="text.primary" gutterBottom>
-              {course.creator_name}
-            </Typography>
-            <Typography
-              sx={{ fontSize: 10 }}
-              color="text.secondary"
-              gutterBottom
+                  justifyContent: "center",
+                }}
+              >
+                <Typography
+                  sx={{ fontSize: 14 }}
+                  color="text.primary"
+                  gutterBottom
+                >
+                  {course.creator_name}
+                </Typography>
+                <Typography
+                  sx={{ fontSize: 10 }}
+                  color="text.secondary"
+                  gutterBottom
+                >
+                  {course.creator_position}
+                </Typography>
+              </Box>
+            </>
+          ) : (
+            <Box
+              sx={{
+                width: "100%",
+                display: "flex",
+                flexDirection: "column",
+                minHeight: "60px",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
             >
-              {course.creator_position}
-            </Typography>
-          </Box>
+              <Button variant="card">Continue Course</Button>
+            </Box>
+          )}
         </CardActions>
       </Card>
     </>

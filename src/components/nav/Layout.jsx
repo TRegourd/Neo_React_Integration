@@ -23,7 +23,7 @@ export default function Layout({ navlinks, children }) {
       <CssBaseline />
       <AppBar
         position="fixed"
-        sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
+        sx={{ zIndex: (theme) => theme.zIndex.drawer + 1, boxShadow: "none" }}
       >
         <Navbar pages={navlinks?.navbar} profile={navlinks?.profile} />
       </AppBar>
@@ -40,23 +40,27 @@ export default function Layout({ navlinks, children }) {
         }}
       >
         <Toolbar />
-        <Box sx={{ overflow: "auto" }}>
+        <Box
+          sx={{ overflow: "auto", height: "100%", backgroundColor: "#111434" }}
+        >
+          <CustomDivider />
           <List>
             {navlinks?.sidebar?.map((item, index) => (
               <ListItem disablePadding key={index}>
-                <Link to={item.link}>
-                  <ListItemButton>
+                <Link to={item.disabled ? "/" : item.link}>
+                  <ListItemButton sx={item.disabled ? { opacity: 0.5 } : {}}>
                     <ListItemIcon>
                       <Icon src={`/${item.icon}`} />
                     </ListItemIcon>
                     <ListItemText primary={`${item.text}`} />
                   </ListItemButton>
+                  {item.disabled && <InfoText>Comming Soon</InfoText>}
                 </Link>
               </ListItem>
             ))}
           </List>
-          <Divider />
-          <Typography variant="h5" sx={{ padding: "10px" }}>
+          <Divider variant="middle" sx={{ borderColor: "white" }} />
+          <Typography variant="h5" sx={{ color: "white", padding: "10px" }}>
             Catalog
           </Typography>
           <List sx={{ paddingLeft: "30px" }}>
@@ -82,4 +86,27 @@ export default function Layout({ navlinks, children }) {
 const Icon = styled("img")(() => ({
   height: "30px",
   width: "30px",
+}));
+
+const CustomDivider = styled("div")(() => ({
+  height: "4px",
+
+  background:
+    "linear-gradient(90deg, rgba(146,0,15,1) 0%, rgba(245,207,67,1) 50%, rgba(146,0,15,1) 100%)",
+}));
+
+const InfoText = styled("span")(() => ({
+  position: "relative",
+  left: "40%",
+  top: "-20px",
+  backgroundColor: "#00edbd",
+  borderRadius: "10px",
+  textAlign: "center",
+  width: "fit-content",
+  paddingLeft: "10px",
+  paddingRight: "10px",
+  paddingTop: "2px",
+  paddingBottom: "2px",
+  fontSize: "10px",
+  color: "#111434",
 }));

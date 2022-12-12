@@ -4,11 +4,16 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import "./style/global.scss";
 
+import { ThemeProvider } from "@mui/material";
+import theme from "./style/theme";
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <ThemeProvider theme={theme}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </ThemeProvider>
   </React.StrictMode>
 );

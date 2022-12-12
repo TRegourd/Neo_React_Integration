@@ -8,7 +8,12 @@
   "sidebar": [
     { "text": "My Progress", "link": "/progress", "icon": "rocket.png" },
     { "text": "My Note", "link": "/notes", "icon": "book.png" },
-    { "text": "LeaderBoard", "link": "/leaderboard", "icon": "cup.png" }
+    {
+      "text": "LeaderBoard",
+      "link": "/leaderboard",
+      "icon": "cup.png",
+      "disabled": true
+    }
   ],
   "catalog": [
     { "text": "Tasks", "link": "/tasks" },
