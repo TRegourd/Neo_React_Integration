@@ -9,7 +9,6 @@ test("renders card without button when course is not started", () => {
   };
 
   render(<CourseCard course={course} />);
-
   expect(screen.queryByRole("button")).not.toBeInTheDocument();
 });
 
@@ -18,7 +17,6 @@ test("renders card with button when course is started", () => {
     id: 1,
     user_progression: 20,
   };
-
   render(<CourseCard course={course} />);
   expect(screen.getByRole("button")).toBeInTheDocument();
 });
