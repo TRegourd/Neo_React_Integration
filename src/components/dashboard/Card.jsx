@@ -11,6 +11,7 @@ import {
 } from "@mui/material";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function CourseCard({ course }) {
   return (
@@ -116,7 +117,11 @@ export default function CourseCard({ course }) {
                 justifyContent: "center",
               }}
             >
-              <Button variant="card">Continue Course</Button>
+              <Link to={`/courses/${course.id}`}>
+                <Button id="ContinueButton" variant="card">
+                  Continue Course
+                </Button>
+              </Link>
             </Box>
           )}
         </CardActions>

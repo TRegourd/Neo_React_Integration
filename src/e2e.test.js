@@ -22,9 +22,17 @@ describe("Navigate to My Course", () => {
     expect(text).toBeTruthy();
 
     // Verify that there is as many card as in courseData
-
     const cards = await page.$$("#CourseCard");
     expect(cards.length).toEqual(courseData.length);
+  });
+
+  it("should navigate to a single course page when clicking on `Continue Course` button", async () => {
+    await page.goto("http://localhost:3001/progress");
+    const cards = await page.$$("#CourseCard");
+    const button = await cards[1].$("#ContinueButton");
+    await button.click();
+    const url = await page.evaluate(() => document.location.href);
+    expect(url).toEqual("http://localhost:3001/courses/2");
   });
 
   afterAll((done) => {
