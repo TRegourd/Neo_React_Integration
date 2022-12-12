@@ -47,7 +47,10 @@ export default function Layout({ navlinks, children }) {
           <List>
             {navlinks?.sidebar?.map((item, index) => (
               <ListItem disablePadding key={index}>
-                <Link to={item.disabled ? "/" : item.link}>
+                <Link
+                  to={item.disabled ? "/" : item.link}
+                  className="sidebarLinks"
+                >
                   <ListItemButton sx={item.disabled ? { opacity: 0.5 } : {}}>
                     <ListItemIcon>
                       <Icon src={`/${item.icon}`} />

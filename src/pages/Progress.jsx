@@ -18,7 +18,7 @@ export default function Progress() {
   });
 
   return (
-    <>
+    <section id="MyCourse">
       <Grid
         container
         direction="row"
@@ -56,6 +56,6 @@ export default function Progress() {
           </Grid>
         ))}
       </Grid>
-    </>
+    </section>
   );
 }
